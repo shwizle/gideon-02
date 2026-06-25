@@ -1,6 +1,59 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gideon</title>
+
+<style>
+html, body {
+    margin: 0;
+    background: white;
+    overflow-y: scroll;
+    height: 400vh;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+
+    text-align: center;
+    font-size: 42px;
+    line-height: 1.05;
+    font-weight: 700;
+
+    transition: font-size .05s linear;
+}
+</style>
+
+</head>
+
 <body>
-<P>hello</P>
+
+<div class="text" id="text">
+IF THERE IS ONE<br>
+MOST SPECIALIST<br>
+MOST BESTEST<br>
+MOST SCRUMPTIOUS<br>
+MOST 40EST FRIEND<br>
+IT'S GIDEON.
+</div>
+
+<script>
+const text = document.getElementById("text");
+
+window.addEventListener("scroll", () => {
+    const scale = 42 + window.scrollY * 0.18;
+    text.style.fontSize = scale + "px";
+});
+</script>
+
 </body>
 </html>
